@@ -1,0 +1,143 @@
+
+Q1. Use print command on python to find i.)sin30 ii.) pi iii.)e iv.)cod30
+>>> from math import *
+>>> sin(30)
+-0.9880316240928618
+>>> pi
+3.141592653589793
+>>> e
+2.718281828459045
+>>> cos(30)
+0.15425144988758405
+Q2. Use python code to evaluate each of the following expression i.)20 modulus 2+7-(3+7)x20÷2 ii.)30x10 
+floor division 3+10 modulus 3 iii.)25-24+4 floor division 4
+>>> A=20%2+7-(3+7)*20/2
+>>> print(A)
+-93.0
+>>> B=30*10//3+10%3
+>>> print(B)
+101
+>>> C=25-24+4//4
+>>> print(C)
+2
+Q3. Write the python code to print ‘Python is bad’ and ‘Python is wonderful’ ,where wonderful is global 
+variable and bad is local variable.
+>>> wonderful = "wonderful"
+>>> def print_messages():
+... bad = "bad"
+... print(f"Python is {bad}")
+... print(f"Python is {wonderful}")
+>>> print_messages()
+Python is bad
+Python is wonderful
+Q4. Use print code on Python (a=4,b=6,c=8,d=12). (i) print(a+c) (ii) print(a*b) (iii) print(c**d) (iv) print(a/b) (e) 
+Expression: 3 + ( 9 - 2) / 7 * 2 ** 2
+>>> a=4; b=6; c=8; d=10
+>>> print(a+c)
+12
+>>> print(a*b)
+24
+>>> print(c**d)
+1073741824
+>>> print(a/b)
+0.6666666666666666
+>>> 3+(9-2)/7*2**2
+7.0
+Q5. . Using Python code, evaluate the following expression of two complex number z1 = 3 + 2j and z2 = −4 + 1j 
+i.) z1 + z2 ii.) z1 − z2 iii.) z1 ∗ z2
+>>> z1=3+2j ; z2=-4+1j
+>>> z1+z2
+(-1+3j)
+>>> z1-z2
+(7+1j)
+>>> z1*z2
+(-14-5j)
+Q6. Write a program to convert temperature from Farhrenheit to Celsius.
+>>> def fahrenheit_to_celsius(fahrenheit):
+... celsius = (fahrenheit - 32) * 5/9
+... return celsius
+... fahrenheit_temperature = 32
+... celsius_temperature = fahrenheit_to_celsius(fahrenheit_temperature)
+... print(f"{fahrenheit_temperature} degrees Fahrenheit is {celsius_temperature:.2f} degrees Celsius.")
+...
+>>> fahrenheit_to_celsius(64)
+17.77777777777778
+Q7. Write a program that calculates the volume and surface area of sphere from its radius given as input 
+>>> def volume(r):
+... volume = 4/3*pi*r**3
+... print(f"volume of sphere is:",{volume})
+...
+>>> volume(2)
+volume of sphere is: {33.510321638291124}
+>>> def surface_area(r):
+... surface_area = 4*pi*r**2
+... print(f"surface area of sphere is:",{surface_area})
+...
+>>> surface_area(3)
+surface area of sphere is: {113.09733552923255}
+Q8. Wirte a program that calculates the cost per square inch of a circular pizza, given its diameter and price. 
+The formula of area is πr2.
+>>> from math import *
+>>> def cost_per_square_inch(diameter,price):
+... radius = diameter/2
+... area =pi*radius**2
+... cost_per_inch=price/area
+... return cost_per_inch
+... pizza_diameter=float(input("enter the diameter of the pizza in inches:"))
+... pizza_price=float(input("enter the price of the pizza:$"))
+... result=cost_per_square_inch(pizza_diameter,pizza_price)
+... print(f"the cost per square inch of the pizza is:${result:.2f}")
+...
+>>> cost_per_square_inch(5,100)
+5.092958178940651
+Q9. Write a python program to find the area and circumference of a circle(r=5)
+>>> from math import *
+>>> r=5; pi=3.14 ; area=pi*r**2; circumference=2*pi*r
+>>> print(area)
+78.5
+>>> print(circumference)
+31.400000000000002
+Q10. Write Python program to find diameter, area, circumference of the circle with radius is 5.
+>>> from math import *
+>>> r=5; pi=3.14;diameter=2*r; area=pi*r**2; circumference=2*pi*r
+>>> print(diameter)
+10
+>>> print(area)
+78.5
+>>> print(circumference)
+31.400000000000002
+Q11. Use python code to find hypotenuse of triangle whose sides are 12 and 5.
+>>> from math import *
+>>> side1=12; side2=5; hypotenuse=side1**2+side2**2
+>>> print(hypotenuse)
+169
+Q12. Find the values of the following exression if x and y are true and z is false. i.) (x or y) and z ii.) (x and y) or 
+not z. iii.) (x and not y)or (x and z).
+>>> x='true'
+>>> y='true'
+>>> z='false'
+>>> p=x or y and z
+>>> print(p)
+true
+>>> x='true'
+>>> y='true'
+>>> z='false'
+>>> p=x or y
+>>> print(p)
+true
+>>> q=p and z
+>>> print(q)
+false
+>>> a=x and y
+>>> print(a)
+true
+>>> b=a or not z
+>>> print(b)
+true
+>>> c=x and not y
+>>> print(c)
+False
+>>> d=c or x and z
+>>> print(d)
+false
+ 
